@@ -45,18 +45,18 @@ export default function Login() {
   const isFormValid = isEmailValid && formData.password.length >= 6;
 
   return (
-    <div className="min-h-[93dvh] bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center p-4">
+    <div className="min-h-[93dvh] bg-gradient-to-br from-gray-50 via-white to-indigo-50 flex items-center justify-center p-4">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gray-100 rounded-full opacity-20 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full opacity-20 blur-3xl"></div>
 
       <div className="w-full max-w-md relative z-10">
         {/* Card */}
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-8 py-8">
+          <div className="bg-gradient-to-r from-gray-600 to-gray-800 px-8 py-8">
             <h1 className="text-3xl font-bold text-white text-center">Welcome Back</h1>
-            <p className="text-blue-100 text-center mt-2">Sign in to your InvoiceFlow account</p>
+            <p className="text-gray-100 text-center mt-2">Sign in to your InvoiceFlow account</p>
           </div>
 
           {/* Content */}
@@ -89,7 +89,7 @@ export default function Login() {
                       ? 'border-red-400 bg-red-50'
                       : formData.email && isEmailValid
                         ? 'border-green-400 bg-green-50'
-                        : 'border-gray-300 hover:border-gray-400 focus:border-blue-500'
+                        : 'border-gray-300 hover:border-gray-400 focus:border-gray-500'
                     }`}
                   placeholder="you@example.com"
                 />
@@ -115,7 +115,7 @@ export default function Login() {
                     onChange={handleChange}
                     onBlur={() => handleBlur('password')}
                     required
-                    className="w-full px-4 py-4 pr-12 border-2 border-gray-300 hover:border-gray-400 focus:border-blue-500 rounded-lg focus:outline-none transition-all duration-200"
+                    className="w-full px-4 py-4 pr-12 border-2 border-gray-300 hover:border-gray-400 focus:border-gray-500 rounded-lg focus:outline-none transition-all duration-200"
                     placeholder="••••••••"
                   />
 
@@ -133,7 +133,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={loading || !isFormValid}
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-400 disabled:to-gray-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:shadow-none"
+                className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 disabled:from-gray-400 disabled:to-gray-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:shadow-none"
               >
                 {loading ? 'Signing in...' : 'Sign In'}
               </button>
@@ -154,17 +154,17 @@ export default function Login() {
               Don't have an account?{' '}
               <Link
                 to="/register"
-                className="text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+                className="text-gray-600 hover:text-gray-700 font-semibold transition-colors"
               >
                 Create one
               </Link>
             </p>
 
             {/* Demo Credentials */}
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
               <p className="text-xs text-gray-600 mb-2 font-semibold">Demo Credentials:</p>
-              <p className="text-xs text-gray-600">Email: <span className="font-mono text-blue-600">demo@example.com</span></p>
-              <p className="text-xs text-gray-600">Password: <span className="font-mono text-blue-600">password123</span></p>
+              <p className="text-xs text-gray-600">Email: <span className="font-mono text-gray-600">demo@example.com</span></p>
+              <p className="text-xs text-gray-600">Password: <span className="font-mono text-gray-600">password123</span></p>
             </div>
           </div>
         </div>

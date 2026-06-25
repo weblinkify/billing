@@ -81,18 +81,18 @@ export default function Register() {
   ];
 
   return (
-    <div className="min-h-[93dvh] bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center p-4 py-12">
+    <div className="min-h-[93dvh] bg-gradient-to-br from-gray-50 via-white to-indigo-50 flex items-center justify-center p-4 py-12">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gray-100 rounded-full opacity-20 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full opacity-20 blur-3xl"></div>
 
       <div className="w-full max-w-md relative z-10">
         {/* Card */}
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-8 py-8">
+          <div className="bg-gradient-to-r from-gray-600 to-gray-800 px-8 py-8">
             <h1 className="text-3xl font-bold text-white text-center">Join InvoiceFlow</h1>
-            <p className="text-blue-100 text-center mt-2">Start managing your bookings today</p>
+            <p className="text-gray-100 text-center mt-2">Start managing your bookings today</p>
           </div>
 
           {/* Content */}
@@ -118,7 +118,7 @@ export default function Register() {
                   onChange={handleChange}
                   onBlur={() => handleBlur('name')}
                   required
-                  className="w-full px-4 py-4 border-2 border-gray-300 hover:border-gray-400 focus:border-blue-500 rounded-lg focus:outline-none transition-all duration-200"
+                  className="w-full px-4 py-4 border-2 border-gray-300 hover:border-gray-400 focus:border-gray-500 rounded-lg focus:outline-none transition-all duration-200"
                   placeholder="John Doe"
                 />
               </div>
@@ -139,7 +139,7 @@ export default function Register() {
                       ? 'border-red-400 bg-red-50'
                       : formData.email && isEmailValid
                         ? 'border-green-400 bg-green-50'
-                        : 'border-gray-300 hover:border-gray-400 focus:border-blue-500'
+                        : 'border-gray-300 hover:border-gray-400 focus:border-gray-500'
                     }`}
                   placeholder="you@example.com"
                 />
@@ -159,7 +159,7 @@ export default function Register() {
                   required
                   className={`w-full px-4 py-4 border-2 rounded-lg focus:outline-none transition-all duration-200 ${isPasswordStrong && formData.password
                       ? 'border-green-400 bg-green-50'
-                      : 'border-gray-300 hover:border-gray-400 focus:border-blue-500'
+                      : 'border-gray-300 hover:border-gray-400 focus:border-gray-500'
                     }`}
                   placeholder="••••••••"
                 />
@@ -182,7 +182,7 @@ export default function Register() {
                       ? 'border-green-400 bg-green-50'
                       : formData.confirmPassword && !passwordsMatch
                         ? 'border-red-400 bg-red-50'
-                        : 'border-gray-300 hover:border-gray-400 focus:border-blue-500'
+                        : 'border-gray-300 hover:border-gray-400 focus:border-gray-500'
                     }`}
                   placeholder="••••••••"
                 />
@@ -204,7 +204,7 @@ export default function Register() {
                   name="role"
                   value={formData.role}
                   onChange={handleChange}
-                  className="w-full px-4 py-4 border-2 border-gray-300 hover:border-gray-400 focus:border-blue-500 rounded-lg focus:outline-none transition-all duration-200"
+                  className="w-full px-4 py-4 border-2 border-gray-300 hover:border-gray-400 focus:border-gray-500 rounded-lg focus:outline-none transition-all duration-200"
                 >
                   {roles.map(role => (
                     <option key={role.value} value={role.value}>
@@ -218,7 +218,7 @@ export default function Register() {
               <button
                 type="submit"
                 disabled={loading || !isFormValid}
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-400 disabled:to-gray-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:shadow-none"
+                className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 disabled:from-gray-400 disabled:to-gray-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:shadow-none"
               >
                 {loading ? 'Creating account...' : 'Create Account'}
               </button>
@@ -239,7 +239,7 @@ export default function Register() {
               Already have an account?{' '}
               <Link
                 to="/login"
-                className="text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+                className="text-gray-600 hover:text-gray-700 font-semibold transition-colors"
               >
                 Sign in
               </Link>

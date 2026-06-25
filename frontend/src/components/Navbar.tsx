@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text text-transparent">
               📅 InvoiceFlow
             </div>
           </Link>
@@ -29,19 +29,19 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-600 font-medium transition-colors duration-200"
             >
               Home
             </Link>
             <Link
               to="/book"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-600 font-medium transition-colors duration-200"
             >
               Book Now
             </Link>
             <Link
               to="/my-bookings"
-              className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              className="flex items-center gap-2 text-gray-700 hover:text-gray-600 font-medium transition-colors duration-200"
             >
               <Calendar size={18} />
               My Bookings
@@ -51,7 +51,7 @@ export default function Navbar() {
               <>
                 <Link
                   to="/my-bookings"
-                  className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                  className="flex items-center gap-2 text-gray-700 hover:text-gray-600 font-medium transition-colors duration-200"
                 >
                   <Calendar size={18} />
                   My Bookings
@@ -60,14 +60,14 @@ export default function Navbar() {
                 {user.role === 'admin' && (
                   <Link
                     to="/admin"
-                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                    className="text-gray-700 hover:text-gray-600 font-medium transition-colors duration-200"
                   >
                     Admin Panel
                   </Link>
                 )}
                 <Link
                   to="/dashboard"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-gray-600 font-medium transition-colors duration-200"
                 >
                   Dashboard
                 </Link>
@@ -89,14 +89,14 @@ export default function Navbar() {
               <div className="flex items-center gap-3 pl-4 border-l border-gray-200">
                 <Link
                   to="/login"
-                  className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                  className="flex items-center gap-2 text-gray-700 hover:text-gray-600 font-medium transition-colors duration-200"
                 >
                   <LogIn size={18} />
                   Login
                 </Link>
                 <Link
                   to="/register"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
+                  className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
                 >
                   Sign Up
                 </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
             </Link>
             <Link
               to="/my-bookings"
-              className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              className="flex items-center gap-2 text-gray-700 hover:text-gray-600 font-medium transition-colors duration-200"
             >
               <Calendar size={18} />
               My Bookings
@@ -188,7 +188,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   to="/register"
-                  className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all"
+                  className="block w-full text-center bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg font-medium transition-all"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Sign Up

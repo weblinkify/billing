@@ -50,7 +50,7 @@ export default function AdminPanel() {
         {/* Stats */}
         <div className="grid md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-6">
-            <div className="text-3xl font-bold text-blue-600">{appointments.length}</div>
+            <div className="text-3xl font-bold text-gray-600">{appointments.length}</div>
             <p className="text-gray-600 mt-2">Total Appointments</p>
           </div>
           <div className="bg-white rounded-lg shadow p-6">
@@ -76,7 +76,7 @@ export default function AdminPanel() {
               onClick={() => setActiveTab('appointments')}
               className={`flex-1 py-4 px-6 font-semibold transition ${
                 activeTab === 'appointments'
-                  ? 'border-b-2 border-blue-600 text-blue-600'
+                  ? 'border-b-2 border-gray-600 text-gray-600'
                   : 'text-gray-600 hover:text-gray-800'
               }`}
             >
@@ -86,7 +86,7 @@ export default function AdminPanel() {
               onClick={() => setActiveTab('services')}
               className={`flex-1 py-4 px-6 font-semibold transition ${
                 activeTab === 'services'
-                  ? 'border-b-2 border-blue-600 text-blue-600'
+                  ? 'border-b-2 border-gray-600 text-gray-600'
                   : 'text-gray-600 hover:text-gray-800'
               }`}
             >
@@ -96,7 +96,7 @@ export default function AdminPanel() {
               onClick={() => setActiveTab('employees')}
               className={`flex-1 py-4 px-6 font-semibold transition ${
                 activeTab === 'employees'
-                  ? 'border-b-2 border-blue-600 text-blue-600'
+                  ? 'border-b-2 border-gray-600 text-gray-600'
                   : 'text-gray-600 hover:text-gray-800'
               }`}
             >
@@ -128,7 +128,7 @@ export default function AdminPanel() {
                         <td className="py-3 px-4">{new Date(apt.date).toLocaleString()}</td>
                         <td className="py-3 px-4">
                           <span className={`px-2 py-1 rounded text-xs font-semibold ${
-                            apt.status === 'SCHEDULED' ? 'bg-blue-100 text-blue-800' :
+                            apt.status === 'SCHEDULED' ? 'bg-gray-100 text-gray-800' :
                             apt.status === 'COMPLETED' ? 'bg-green-100 text-green-800' :
                             'bg-red-100 text-red-800'
                           }`}>
@@ -148,7 +148,7 @@ export default function AdminPanel() {
                     <p className="text-gray-600 text-sm mt-1">{service.description}</p>
                     <div className="mt-3 flex justify-between items-center">
                       <span className="text-sm text-gray-600">Duration: {service.duration} mins</span>
-                      <span className="font-bold text-blue-600">€{service.price.toFixed(2)}</span>
+                      <span className="font-bold text-gray-600">€{service.price.toFixed(2)}</span>
                     </div>
                   </div>
                 ))}

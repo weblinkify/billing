@@ -6,16 +6,16 @@ export default function Sidebar() {
       <h1 className="text-2xl font-bold mb-8">InvoiceFlow</h1>
 
       <nav className="space-y-4">
-        <Link to="/dashboard" className="block hover:text-blue-400">
+        <Link to="/dashboard" className="block hover:text-gray-400">
           Dashboard
         </Link>
-        <Link to="/create" className="block hover:text-blue-400">
+        <Link to="/create" className="block hover:text-gray-400">
           Create Invoice
         </Link>
-        <Link to="/invoices" className="block hover:text-blue-400">
+        <Link to="/invoices" className="block hover:text-gray-400">
           Invoices
         </Link>
-        <Link to="/analytics" className="block hover:text-blue-400">
+        <Link to="/analytics" className="block hover:text-gray-400">
           Analytics
         </Link>
       </nav>

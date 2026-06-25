@@ -116,7 +116,7 @@ export default function MyBookings() {
       case "pending":
         return "bg-yellow-100 text-yellow-800 border-yellow-300";
       case "completed":
-        return "bg-blue-100 text-blue-800 border-blue-300";
+        return "bg-gray-100 text-gray-800 border-gray-300";
       case "cancelled":
         return "bg-red-100 text-red-800 border-red-300";
       default:
@@ -163,7 +163,7 @@ export default function MyBookings() {
   const filteredBookings = getFilteredBookings();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20 pb-20 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-indigo-50 pt-20 pb-20 px-4">
       <div className="max-w-4xl mx-auto">
         
         {/* Header */}
@@ -176,7 +176,7 @@ export default function MyBookings() {
         <div className="mb-8 flex gap-4">
           <button
             onClick={() => navigate("/book")}
-            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-lg font-semibold shadow-lg transition-all"
+            className="flex items-center gap-2 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white px-6 py-3 rounded-lg font-semibold shadow-lg transition-all"
           >
             <Plus size={20} />
             New Booking
@@ -192,7 +192,7 @@ export default function MyBookings() {
                 onClick={() => setFilter(tab as any)}
                 className={`px-6 py-2 rounded-lg font-semibold transition-all ${
                   filter === tab
-                    ? "bg-blue-600 text-white shadow-lg"
+                    ? "bg-gray-600 text-white shadow-lg"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
@@ -225,7 +225,7 @@ export default function MyBookings() {
             </p>
             <button
               onClick={() => navigate("/book")}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all"
+              className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-semibold transition-all"
             >
               Create Your First Booking
             </button>
@@ -238,7 +238,7 @@ export default function MyBookings() {
             {filteredBookings.map((booking) => (
               <div
                 key={booking.id}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all p-6 border-l-4 border-blue-600"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all p-6 border-l-4 border-gray-600"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                   
@@ -257,7 +257,7 @@ export default function MyBookings() {
                     {/* Details Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="flex items-center gap-3">
-                        <Calendar size={20} className="text-blue-600" />
+                        <Calendar size={20} className="text-gray-600" />
                         <div>
                           <p className="text-xs text-gray-500 uppercase font-semibold">Date</p>
                           <p className="text-gray-900 font-semibold">{formatDate(booking.date)}</p>
@@ -265,7 +265,7 @@ export default function MyBookings() {
                       </div>
 
                       <div className="flex items-center gap-3">
-                        <Clock size={20} className="text-blue-600" />
+                        <Clock size={20} className="text-gray-600" />
                         <div>
                           <p className="text-xs text-gray-500 uppercase font-semibold">Time</p>
                           <p className="text-gray-900 font-semibold">{booking.time}</p>
@@ -273,7 +273,7 @@ export default function MyBookings() {
                       </div>
 
                       <div className="flex items-center gap-3">
-                        <User size={20} className="text-blue-600" />
+                        <User size={20} className="text-gray-600" />
                         <div>
                           <p className="text-xs text-gray-500 uppercase font-semibold">Professional</p>
                           <p className="text-gray-900 font-semibold">{booking.employee}</p>
@@ -290,7 +290,7 @@ export default function MyBookings() {
                           setEditForm(booking);
                           setShowEditModal(true);
                         }}
-                        className="flex items-center justify-center gap-2 bg-blue-100 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg font-semibold transition-all"
+                        className="flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition-all"
                       >
                         <Edit2 size={18} />
                         <span className="hidden md:inline">Reschedule</span>
@@ -359,7 +359,7 @@ export default function MyBookings() {
                   type="date"
                   value={editForm.date}
                   onChange={(e) => setEditForm({ ...editForm, date: e.target.value })}
-                  className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none"
+                  className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-gray-500 focus:outline-none"
                 />
               </div>
 
@@ -370,7 +370,7 @@ export default function MyBookings() {
                 <select
                   value={editForm.time}
                   onChange={(e) => setEditForm({ ...editForm, time: e.target.value })}
-                  className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none"
+                  className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-gray-500 focus:outline-none"
                 >
                   <option value="">Select Time</option>
                   <option value="09:00">09:00</option>
@@ -391,7 +391,7 @@ export default function MyBookings() {
               </button>
               <button
                 onClick={handleReschedule}
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all"
+                className="flex-1 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg font-semibold transition-all"
               >
                 Confirm
               </button>
